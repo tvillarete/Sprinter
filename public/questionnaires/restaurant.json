@@ -1,0 +1,203 @@
+{
+   "options": {
+      "start": "cuisine"
+   },
+   "questions": {
+      "cuisine": {
+         "question": "What kind of cuisine are you looking for?",
+         "shorthand": "cuisine",
+         "answers": [
+            {
+               "answer": "American",
+               "next": "NumPeople"
+            },
+            {
+               "answer": "Chinese",
+               "next": "NumPeople"
+            },
+            {
+               "answer": "German",
+               "next": "NumPeople"
+            },
+            {
+               "answer": "Greek",
+               "next": "NumPeople"
+            },
+            {
+               "answer": "Indian",
+               "next": "NumPeople"
+            },
+            {
+               "answer": "Italian",
+               "next": "NumPeople"
+            },
+            {
+               "answer": "Japanese",
+               "next": "NumPeople"
+            },
+            {
+               "answer": "Mediterranean",
+               "next": "NumPeople"
+            },
+            {
+               "answer": "Mexican",
+               "next": "NumPeople"
+            },
+            {
+               "answer": "Thai",
+               "next": "NumPeople"
+            },
+            {
+               "answer": "Vietnamese",
+               "next": "NumPeople"
+            }
+         ],
+         "view": "MultiChoiceView"
+      },
+      "NumPeople": {
+         "question": "How many people are in your party?",
+         "shorthand": "NumPeople",
+         "answers": [
+            {
+               "answer": "1",
+               "next": "rating"
+            },
+            {
+               "answer": "2",
+               "next": "rating"
+            },
+            {
+               "answer": "3",
+               "next": "rating"
+            },
+            {
+               "answer": "4",
+               "next": "rating"
+            },
+            {
+               "answer": "5+",
+               "next": "rating"
+            }
+         ],
+         "view": "MultiChoiceView"
+      },
+      "rating": {
+         "question": "What's the minimum rating you'd prefer?",
+         "shorthand": "rating",
+         "answers": [
+            {
+               "answer": 1.0,
+               "next": "is21"
+            },
+            {
+               "answer": 2.0,
+               "next": "is21"
+            },
+            {
+               "answer": 3.0,
+               "next": "is21"
+            },
+            {
+               "answer": 4.0,
+               "next": "is21"
+            },
+            {
+               "answer": 5.0,
+               "next": "is21"
+            }
+         ],
+         "view": "MultiChoiceView"
+      },
+      "is21": {
+         "question": "Is everyone 21 years old?",
+         "shorthand": "is21",
+         "answers": [
+            {
+               "answer": "Yes",
+               "next": "Date"
+            },
+            {
+               "answer": "No",
+               "next": "Date"
+            }
+         ],
+         "view": "MultiChoiceView"
+      },
+      "Distance": {
+         "question": "How far are you willing to travel?",
+         "shorthand": "Distance",
+         "answers": [
+            {
+               "answer": "< 1 Mile",
+               "next": "price"
+            },
+            {
+               "answer": "1-5 Miles",
+               "next": "price"
+            },
+            {
+               "answer": "5-10 Miles",
+               "next": "price"
+            },
+            {
+               "answer": "10+ Miles",
+               "next": "price"
+            }
+         ],
+         "view": "MultiChoiceView"
+      },
+      "InOutDoor": {
+         "question": "Would you like to be indoor or outdoor?",
+         "shorthand": "InOutDoor",
+         "answers": [
+            {
+               "answer": "Indoor",
+               "next": "Active"
+            },
+            {
+               "answer": "Outdoor",
+               "next": "Active"
+            }
+         ],
+         "view": "MultiChoiceView"
+      },
+      "Date": {
+         "question": "Is this going to be a date?",
+         "shorthand": "Date",
+         "answers": [
+            {
+               "answer": "Yes",
+               "next": "Distance"
+            },
+            {
+               "answer": "No",
+               "next": "Distance"
+            }
+         ],
+         "view": "MultiChoiceView"
+      },
+      "price": {
+         "question": "How much money are you looking to spend?",
+         "shorthand": "price",
+         "answers": [
+            {
+               "answer": "$",
+               "next": ""
+            },
+            {
+               "answer": "$$",
+               "next": ""
+            },
+            {
+               "answer": "$$$",
+               "next": ""
+            },
+            {
+               "answer": "$$$$",
+               "next": ""
+            }
+         ],
+         "view": "MultiChoiceView"
+      }
+   }
+}

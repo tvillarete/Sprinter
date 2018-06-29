@@ -1,0 +1,48 @@
+{
+   "options": {
+      "start": "Distance"
+   },
+   "questions": {
+
+      "Distance": {
+         "question": "How far are you willing to travel?",
+         "shorthand": "Distance",
+         "answers": [
+            {
+            "answer": "< 1 Mile",
+            "next": "Price"
+            }, {
+            "answer": "1-5 Miles",
+            "next": "Price"
+            }, {
+            "answer": "5-10 Miles",
+            "next": "Price"
+            }, {
+            "answer": "10+ Miles",
+            "next": "Price"
+            }
+         ],
+         "view": "MultiChoiceView"
+      },
+      "Price": {
+          "question": "How much money are you looking to spend?",
+          "shorthand": "Price",
+          "answers": [
+             {
+             "answer": "$",
+             "next": ""
+             }, {
+             "answer": "$$",
+             "next": ""
+             }, {
+             "answer": "$$$",
+             "next": ""
+             }, {
+             "answer": "$$$$",
+             "next": ""
+             }
+          ],
+          "view": "MultiChoiceView"
+       }
+   }
+}
