@@ -1,0 +1,19 @@
+{
+   "options": {
+      "start": "members"
+   },
+   "views": {
+      "members": {
+         "view": "members",
+         "next": "sprint_days"
+      },
+      "sprint_days": {
+         "view": "sprint_days",
+         "next": "prev_sprint"
+      },
+      "prev_sprint": {
+         "view": "prev_sprint",
+         "next": ""
+      }
+   }
+}

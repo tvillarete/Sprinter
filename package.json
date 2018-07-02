@@ -4,10 +4,13 @@
   "private": true,
   "homepage": "/Playce",
   "dependencies": {
+    "@ifixit/toolbox": "git+https://github.com/iFixit/toolbox.git",
     "google-maps-react": "^2.0.2",
     "lint": "^1.1.2",
+    "moment": "^2.22.2",
     "react": "^16.3.2",
     "react-confirm": "^0.1.17",
+    "react-dates": "^17.0.0",
     "react-dom": "^16.3.2",
     "react-feather": "^1.1.0",
     "react-geolocated": "^2.4.0",

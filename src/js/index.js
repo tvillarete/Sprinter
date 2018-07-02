@@ -9,9 +9,8 @@ import GTRO from '../fonts/GT/GTWalsheim-RegularOblique.woff2';
 import GTBO from '../fonts/GT/GTWalsheim-BoldOblique.woff2';
 import Home from '../images/home.svg';
 import MainView from './views/main/index';
-import SetupView from './views/setup/';
 import AboutView from './views/about/index';
-import QuestionnaireView from './views/questionnaire/index';
+import OnboardingView from './views/onboarding';
 import ResultsView from './views/results/index';
 import MyPlaycesView from './views/playces/index';
 
@@ -115,8 +114,7 @@ const HomeIcon = styled.div`
 const views = {
    main: <MainView />,
    playces: <MyPlaycesView />,
-   setup: <SetupView />,
-   questionnaire: <QuestionnaireView />,
+   onboarding: <OnboardingView />,
    about: <AboutView />,
    results: <ResultsView />,
 };
@@ -145,6 +143,7 @@ export default class Sprinter extends Component {
    emptyViewStack = () => {
       this.setState({ emptyingViews: true });
 
+      console.log(this.state);
       setTimeout(() => {
          this.setState(state => {
             state.viewStack = state.viewStack.slice(0, 1);
@@ -182,6 +181,7 @@ export default class Sprinter extends Component {
          return React.cloneElement(view, props);
       } catch (e) {
          console.error('Error: this sidebar view is broken');
+         console.error('view: ', view);
       }
    };
 

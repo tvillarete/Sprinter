@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Bubble from '../../components/bubble';
+import { constants, Button } from '@ifixit/toolbox';
 import { animation, color } from '../../toolbox';
+
+const iFixitColors = constants.color;
 
 const Container = styled.div`
    display: flex;
@@ -12,6 +15,22 @@ const Container = styled.div`
    transform: ${props => (props.changingView ? 'scale(1.5)' : 'scale(1)')};
    opacity: ${props => (props.changingView ? 0 : 1)};
    animation: ${animation.scaleEnter} 0.5s;
+`;
+
+const LogoContainer = styled.div`
+   width: 100%;
+   margin-top: 10em;
+   display: flex;
+   justify-content: center;
+`;
+
+const Logo = styled.img`
+   height: 6em;
+`;
+
+const Header = styled.h1`
+   margin: 1em auto 2em auto;
+   color: ${iFixitColors.gray[6]};
 `;
 
 const MenuButtonContainer = styled.div`
@@ -26,7 +45,7 @@ export default class MainView extends Component {
    start = () => {
       this.props.onEvent({
          type: 'new-view',
-         view: { name: 'setup', props: {} },
+         view: { name: 'onboarding', props: {} },
       });
    };
 
@@ -35,10 +54,19 @@ export default class MainView extends Component {
 
       return (
          <Container changingView={changingView}>
+            <LogoContainer>
+               <Logo src="files/images/logo.svg" />
+            </LogoContainer>
+            <Header>Milestone Planning Tool</Header>
             <MenuButtonContainer>
-               <Bubble
-                  text="New Sprint"
-                  color={color.bubbles[2]}
+               <Button
+                  style={{marginRight: '1em'}}
+                  children="Past Sprints"
+                  onClick={this.start}
+               />
+               <Button
+                  children="New Sprint"
+                  design="primary"
                   onClick={this.start}
                />
             </MenuButtonContainer>

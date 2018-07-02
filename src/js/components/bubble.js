@@ -25,8 +25,7 @@ export default class Bubble extends Component {
    };
 
    render() {
-      const { text, color, size, hidden } = this.props;
-      const { isEntering, clicked } = this.state;
+      const { text, color, size, } = this.props;
 
       return (
          <ButtonContainer
