@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled, { injectGlobal } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import GT from '../fonts/GT/GTWalsheim.woff2';
 import GTLO from '../fonts/GT/GTWalsheim-LightOblique.woff2';
 import GTL from '../fonts/GT/GTWalsheim-Light.woff2';
@@ -14,7 +14,7 @@ import OnboardingView from './views/onboarding';
 import ResultsView from './views/results/index';
 import MyPlaycesView from './views/playces/index';
 
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
    @font-face {
       font-family: yikes;
       src: url('files/fonts/yikes.ttf') format('truetype');
@@ -190,6 +190,7 @@ export default class Sprinter extends Component {
 
       return (
          <Container>
+            <GlobalStyle />
             <HomeIcon
                hide={viewStack.length === 1}
                onClick={this.emptyViewStack}>

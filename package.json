@@ -4,21 +4,21 @@
   "private": true,
   "homepage": "/Playce",
   "dependencies": {
-    "@ifixit/toolbox": "git+https://github.com/iFixit/toolbox.git",
+    "@ifixit/toolbox": "^0.12.4",
     "google-maps-react": "^2.0.2",
     "lint": "^1.1.2",
     "moment": "^2.22.2",
-    "react": "^16.3.2",
+    "react": "^16.8",
     "react-confirm": "^0.1.17",
     "react-dates": "^17.0.0",
-    "react-dom": "^16.3.2",
+    "react-dom": "^16.8",
     "react-feather": "^1.1.0",
     "react-geolocated": "^2.4.0",
     "react-google-maps": "^9.4.5",
     "react-loading-indicator": "^1.0.2",
     "react-scripts": "1.1.4",
     "react-star-ratings": "^2.2.0",
-    "styled-components": "^3.2.6"
+    "styled-components": "^4.3"
   },
   "scripts": {
     "start": "react-scripts start",
