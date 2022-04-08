@@ -7,7 +7,7 @@
     "@ifixit/toolbox": "^0.12.4",
     "google-maps-react": "^2.0.2",
     "lint": "^1.1.2",
-    "moment": "^2.22.2",
+    "moment": "^2.29.2",
     "react": "^16.8",
     "react-confirm": "^0.1.17",
     "react-dates": "^17.0.0",
